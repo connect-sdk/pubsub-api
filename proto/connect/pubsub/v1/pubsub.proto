@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package connect.pubsub.v1;
+
+import "google/api/field_behavior.proto";
+import "google/api/resource.proto";
+import "validate/validate.proto";
+
+option (google.api.resource_definition) = {
+  type: "pubsub.googleapis.com/Project"
+  pattern: "projects/{project}"
+};
+option (google.api.resource_definition) = {
+  type: "pubsub.googleapis.com/Topic"
+  pattern: "projects/{project}/topics/{topic}"
+};
+
+// The service that an application uses to consume messages from a subscription via the Push method.
+service PubsubService {
+  // PushPubsubMessage pushes a given message to connect.runtime.v1.MessageService service.
+  rpc PushPubsubMessage(PushPubsubMessageRequest) returns (PushPubsubMessageResponse);
+}
+
+// PushPubsubMessageRequest represents a request for google.pubsub.v1.PubsubService.PushPubsubMessage method.
+message PushPubsubMessageRequest {
+  // The subscription from which messages should be pulled.
+  string subscription = 1 [
+    // field behavior
+    (google.api.field_behavior) = REQUIRED
+  ];
+
+  // The message.
+  PubsubMessage message = 2 [
+    // field behavior
+    (google.api.field_behavior) = REQUIRED,
+    // field validateion
+    (validate.rules).message.required = true
+  ];
+}
+
+// PushPubsubMessageResponse represents a response for google.pubsub.v1.PubsubService.PushPubsubMessage method.
+message PushPubsubMessageResponse {}
+
+// A message data and its attributes.
+message PubsubMessage {
+  // The message payload. For JSON requests, the value of this field must be
+  // base64-encoded.
+  bytes data = 1 [
+    // field behavior
+    (google.api.field_behavior) = OPTIONAL
+  ];
+
+  // Attributes for this message.
+  map<string, string> attributes = 2 [
+    // field behavior
+    (google.api.field_behavior) = OPTIONAL
+  ];
+
+  // ID of this message assigned by the server at publication time. Guaranteed
+  // to be unique within the topic. This value may be read by a subscriber
+  // that receives a PubsubMessage via a Pull call or a push delivery. It must
+  // not be populated by a publisher in a Publish call.
+  reserved 3;
+}
