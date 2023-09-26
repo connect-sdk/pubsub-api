@@ -15,8 +15,6 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
-github.com/connect-sdk/interceptor v0.0.0-20230923105049-0f9b3bf0af85 h1:zbfG8JqMGFy47oq6bqV/Jxvfy+gapNwtERV+zsvvs4I=
-github.com/connect-sdk/interceptor v0.0.0-20230923105049-0f9b3bf0af85/go.mod h1:pPTu+0RVpMXIYooZsctA9GmbkMrncvRC+9WjZ0Jpctg=
 github.com/connect-sdk/interceptor v0.0.0-20230925074743-8c0ecbbd0fbe h1:9hnviB7NzchzDotTON1ySYuOJjnQNHbFAwN/TTzESxE=
 github.com/connect-sdk/interceptor v0.0.0-20230925074743-8c0ecbbd0fbe/go.mod h1:pPTu+0RVpMXIYooZsctA9GmbkMrncvRC+9WjZ0Jpctg=
 github.com/connect-sdk/middleware v0.0.0-20230923105118-91302004475c h1:Ntie7T0klVZmEpVp5plXVVXn+kzM7Q+HVjECHE0wSXQ=
@@ -158,8 +156,8 @@ golang.org/x/tools v0.0.0-20191119224855-298f0cb1881e/go.mod h1:b+2E5dAYhXwXZwtn
 golang.org/x/tools v0.1.12/go.mod h1:hNGJHUnrk76NpqgfD5Aqm5Crs+Hm0VOH/i9J2+nxYbc=
 golang.org/x/xerrors v0.0.0-20190717185122-a985d3407aa7/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
-google.golang.org/api v0.142.0 h1:mf+7EJ94fi5ZcnpPy+m0Yv2dkz8bKm+UL0snTCuwXlY=
-google.golang.org/api v0.142.0/go.mod h1:zJAN5o6HRqR7O+9qJUFOWrZkYE66RH+efPBdTLA4xBA=
+google.golang.org/api v0.143.0 h1:o8cekTkqhywkbZT6p1UHJPZ9+9uuCAJs/KYomxZB8fA=
+google.golang.org/api v0.143.0/go.mod h1:FoX9DO9hT7DLNn97OuoZAGSDuNAXdJRuGK98rSUgurk=
 google.golang.org/appengine v1.1.0/go.mod h1:EbEs0AVv82hx2wNQdGPgUI5lhzA/G0D9YwlJXL52JkM=
 google.golang.org/appengine v1.4.0/go.mod h1:xpcJRLb0r/rnEns0DIKYYv+WjYCduHsrkT7/EB5XEv4=
 google.golang.org/appengine v1.6.8 h1:IhEN5q69dyKagZPYMSdIjS2HqprW324FRQZJcGqPAsM=

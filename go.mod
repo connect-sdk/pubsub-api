@@ -8,7 +8,7 @@ require (
 	github.com/connect-sdk/middleware v0.0.0-20230923105118-91302004475c
 	github.com/envoyproxy/protoc-gen-validate v1.0.2
 	github.com/go-chi/chi/v5 v5.0.10
-	google.golang.org/api v0.142.0
+	google.golang.org/api v0.143.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20230920204549-e6e6cdab5c13
 	google.golang.org/protobuf v1.31.0
 )
