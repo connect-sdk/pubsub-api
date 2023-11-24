@@ -29,6 +29,7 @@ func NewPubsubServiceClient(uri string, options ...connect.ClientOption) pubsubv
 	// prepare the interceptors
 	options = append(options, interceptor.WithTracer())
 	options = append(options, interceptor.WithLogger())
+	options = append(options, interceptor.WithContext())
 	// prepare the client
 	client := &PubsubServiceClient{
 		client: pubsubv1connect.NewPubsubServiceClient(http.DefaultClient, uri, options...),
@@ -64,6 +65,7 @@ func (x *PubsubServiceHandler) Mount(r chi.Router) {
 	options = append(options, interceptor.WithLogger())
 	options = append(options, interceptor.WithRecovery())
 	options = append(options, interceptor.WithValidator())
+	options = append(options, interceptor.WithContext())
 
 	r.Group(func(r chi.Router) {
 		// mount the middleware
