@@ -3,7 +3,7 @@ module github.com/connect-sdk/pubsub-api
 go 1.21.1
 
 require (
-	connectrpc.com/connect v1.12.0
+	connectrpc.com/connect v1.13.0
 	github.com/connect-sdk/interceptor v0.0.0-20231124055640-b4ccac4502d1
 	github.com/connect-sdk/middleware v0.0.0-20231120130547-71cd7b2578bb
 	github.com/envoyproxy/protoc-gen-validate v1.0.2
