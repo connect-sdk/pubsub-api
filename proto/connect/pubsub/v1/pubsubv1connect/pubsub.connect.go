@@ -18,7 +18,7 @@ import (
 // generated with a version of connect newer than the one compiled into your binary. You can fix the
 // problem by either regenerating this code with an older version of connect or updating the connect
 // version compiled into your binary.
-const _ = connect.IsAtLeastVersion0_1_0
+const _ = connect.IsAtLeastVersion1_13_0
 
 const (
 	// PubsubServiceName is the fully-qualified name of the PubsubService service.
@@ -36,6 +36,12 @@ const (
 	// PubsubServicePushPubsubMessageProcedure is the fully-qualified name of the PubsubService's
 	// PushPubsubMessage RPC.
 	PubsubServicePushPubsubMessageProcedure = "/connect.pubsub.v1.PubsubService/PushPubsubMessage"
+)
+
+// These variables are the protoreflect.Descriptor objects for the RPCs defined in this package.
+var (
+	pubsubServiceServiceDescriptor                 = v1.File_connect_pubsub_v1_pubsub_proto.Services().ByName("PubsubService")
+	pubsubServicePushPubsubMessageMethodDescriptor = pubsubServiceServiceDescriptor.Methods().ByName("PushPubsubMessage")
 )
 
 // PubsubServiceClient is a client for the connect.pubsub.v1.PubsubService service.
@@ -57,7 +63,8 @@ func NewPubsubServiceClient(httpClient connect.HTTPClient, baseURL string, opts 
 		pushPubsubMessage: connect.NewClient[v1.PushPubsubMessageRequest, v1.PushPubsubMessageResponse](
 			httpClient,
 			baseURL+PubsubServicePushPubsubMessageProcedure,
-			opts...,
+			connect.WithSchema(pubsubServicePushPubsubMessageMethodDescriptor),
+			connect.WithClientOptions(opts...),
 		),
 	}
 }
@@ -87,7 +94,8 @@ func NewPubsubServiceHandler(svc PubsubServiceHandler, opts ...connect.HandlerOp
 	pubsubServicePushPubsubMessageHandler := connect.NewUnaryHandler(
 		PubsubServicePushPubsubMessageProcedure,
 		svc.PushPubsubMessage,
-		opts...,
+		connect.WithSchema(pubsubServicePushPubsubMessageMethodDescriptor),
+		connect.WithHandlerOptions(opts...),
 	)
 	return "/connect.pubsub.v1.PubsubService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		switch r.URL.Path {
