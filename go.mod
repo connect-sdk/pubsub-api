@@ -3,13 +3,13 @@ module github.com/connect-sdk/pubsub-api
 go 1.21.1
 
 require (
-	connectrpc.com/connect v1.13.0
+	connectrpc.com/connect v1.14.0
 	github.com/connect-sdk/interceptor v0.0.0-20231217080652-41d5c47d4315
 	github.com/connect-sdk/middleware v0.0.0-20231217080731-937032a14b65
 	github.com/envoyproxy/protoc-gen-validate v1.0.2
 	github.com/go-chi/chi/v5 v5.0.11
 	google.golang.org/genproto/googleapis/api v0.0.0-20231212172506-995d672761c0
-	google.golang.org/protobuf v1.31.0
+	google.golang.org/protobuf v1.32.0
 )
 
 require (
