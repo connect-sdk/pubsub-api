@@ -7,7 +7,7 @@ require (
 	github.com/connect-sdk/interceptor v0.0.0-20240126153240-f654c14c6abf
 	github.com/connect-sdk/middleware v0.0.0-20240119124149-df8b12214cc0
 	github.com/envoyproxy/protoc-gen-validate v1.0.4
-	github.com/go-chi/chi/v5 v5.0.11
+	github.com/go-chi/chi/v5 v5.0.12
 	google.golang.org/genproto/googleapis/api v0.0.0-20240125205218-1f4bbc51befe
 	google.golang.org/protobuf v1.32.0
 )
