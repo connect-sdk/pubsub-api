@@ -9,7 +9,7 @@ require (
 	github.com/envoyproxy/protoc-gen-validate v1.0.4
 	github.com/go-chi/chi/v5 v5.0.12
 	google.golang.org/genproto/googleapis/api v0.0.0-20240228224816-df926f6c8641
-	google.golang.org/protobuf v1.32.0
+	google.golang.org/protobuf v1.33.0
 )
 
 require (
