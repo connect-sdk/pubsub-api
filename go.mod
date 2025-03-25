@@ -1,6 +1,7 @@
 module github.com/connect-sdk/pubsub-api
 
 go 1.21.1
+toolchain go1.24.1
 
 require (
 	connectrpc.com/connect v1.18.1
@@ -9,7 +10,7 @@ require (
 	github.com/envoyproxy/protoc-gen-validate v1.2.1
 	github.com/go-chi/chi/v5 v5.2.1
 	google.golang.org/genproto/googleapis/api v0.0.0-20240228224816-df926f6c8641
-	google.golang.org/protobuf v1.36.5
+	google.golang.org/protobuf v1.36.6
 )
 
 require (
